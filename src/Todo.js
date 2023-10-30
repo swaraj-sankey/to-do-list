@@ -5,6 +5,7 @@ import "./Todo.css";
 function Todo({ todo, remove, update, toggleComplete }) {
   const [isEditing, setIsEditing] = useState(false);
   const [task, setTask] = useState(todo.task);
+  const [task2, setTask2] = useState();
 
   const handleClick = evt => {
     remove(evt.target.id);
@@ -19,10 +20,16 @@ function Todo({ todo, remove, update, toggleComplete }) {
   };
   const handleChange = evt => {
     setTask(evt.target.value);
+    setTask2(evt.target.value);
   };
   const toggleCompleted = evt => {
     toggleComplete(evt.target.id);
   };
+  const testFunction = evt =>{
+    let a = 'asdfdfdf'
+  }
+
+  
 
   let result;
   if (isEditing) {
