@@ -25,11 +25,17 @@ function Todo({ todo, remove, update, toggleComplete }) {
   const toggleCompleted = evt => {
     toggleComplete(evt.target.id);
   };
-  const testFunction = evt =>{
+  const testFunction = evt => {
     let a = 'asdfdfdf'
+    if (a == 2) {
+      console.log("a=2")
+    }
+    if (a = 0 / 1) {
+      console.log("0/1")
+    }
   }
 
-  
+
 
   let result;
   if (isEditing) {
